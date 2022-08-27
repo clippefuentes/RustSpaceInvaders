@@ -29,7 +29,7 @@ impl Shot {
       self.timer.reset();
     }
   }
-  pub fn explore(&mut self) {
+  pub fn explode(&mut self) {
     self.exploding = true;
     self.timer = Timer::from_millis(250);
   }
