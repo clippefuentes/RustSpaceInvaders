@@ -1,11 +1,23 @@
-use std::{error::Error, time::{Duration, Instant}, sync::mpsc, thread};
-use crossterm::{
-    terminal::{self, EnterAlternateScreen, LeaveAlternateScreen},
-    ExecutableCommand,
-    cursor::{Hide, Show},
-    event::{self, Event, KeyCode}
+use std::{
+    error::Error,
+    time::{
+        Duration, Instant
+    },
+    sync::mpsc, thread
 };
-use invaders::{frame::{self, new_frame, Drawable}, render, player::Player, invaders::{Invader, Invaders}};
+use crossterm::{
+    terminal::{
+        self, EnterAlternateScreen, LeaveAlternateScreen
+    },
+    ExecutableCommand,
+    cursor::{
+        Hide, Show
+    },
+    event::{
+        self, Event, KeyCode
+    }
+};
+use invaders::{frame::{self, new_frame, Drawable}, render, player::Player, invaders::{ Invaders }};
 use rusty_audio::Audio;
 use std::io;
 
@@ -109,3 +121,4 @@ fn main() -> Result<(), Box<dyn Error>> {
     stdout.execute(LeaveAlternateScreen)?;
     Ok(())
 }
+ 

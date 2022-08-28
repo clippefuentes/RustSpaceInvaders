@@ -2,8 +2,14 @@ use std::io::{Stdout, Write};
 
 use crossterm::{
   QueueableCommand,
-  style::{SetBackgroundColor, Color},
-  terminal::{Clear, ClearType},
+  style::{
+    SetBackgroundColor,
+    Color
+  },
+  terminal::{
+    Clear,
+    ClearType
+  },
   cursor::MoveTo
 };
 
